@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #818181;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 10%;
+}
+
+#current-input {
+    font-size: 24px;
+}
+
+#current-calc {
+    font-size: 12px;
+    color: grey;
+    height: 2em;
+    line-height: 1em;
+}
+
+#calc {
+    width: 300px;
+    background-color: rgb(214, 209, 199);
+    margin: auto;
+    padding: 25px 25px 15px 25px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.75);
+    border-bottom-left-radius: 50% 4%;
+    border-bottom-right-radius: 50% 4%;
+    border-top-left-radius: 50% 4%;
+    border-top-right-radius: 50% 4%;
+    position: relative;
+}
+
+#calc:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    width: 100%;
+    height: 18px;
+    pointer-events: none;
+    background: linear-gradient(#989388, #d6d1c7);
+}
+
+#calc:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    width: 100%;
+    height: 18px;
+    pointer-events: none;
+    background: linear-gradient(#d6d1c7, #989388);
+}
+
+h4 {
+
+}
+
+#output {
+    border-radius: 5px;
+    background-color: #c1c5ab;
+    border: 1px #c6c6c6 inset;
+    margin: 20px 0;
+    text-align: right;
+    padding: .6em .6em 0 .6em;
+    box-shadow: 2px 2px 2px white;
+}
+
+.display {
+    height: 24px;
+}
+
+.result:after {
+    content: '=';
+    padding-left: 4px;
+}
+
+#input {
+    position: relative;
+}
+
+button {
+    width: 50px;
+    height: 45px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: 2px #444 groove;
+    background-color: #333;
+    background: radial-gradient(circle, #1f1e1e, #4f4f4f);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button:nth-child(4n) {
+    margin-right: 0;
+}
+
+button.pressed, button:active {
+    height: 40px;
+    vertical-align: bottom;
+    border: none;
+}
+
+.clear {
+    background: radial-gradient(circle, #b6355e, #982c2c);
+    border: 2px #7e4141 groove;
+}
+
+.tall {
+    height: 100px;
+}
+
+.tall.pressed, .tall:active {
+    height: 95px;
+    margin-top: 5px;
+}
+
+.jump-up {
+    vertical-align: top;
+}
+
+.jump-up.pressed, .jump-up:active {
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+.wide {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 115px;
+    margin-left: 2px;
+}
+
+.dot {
+    position: absolute;
+    left: 131px;
+    bottom: 0;
+}
+
+sides:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    width: 10px;
+    height: 97%;
+    pointer-events: none;
+    background: linear-gradient(to right, #989388, #d6d1c7);
+    z-index: 1;
+}
+
+sides:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    width: 10px;
+    height: 97%;
+    pointer-events: none;
+    background: linear-gradient(to left, #989388, #d6d1c7);
+    z-index: 1;
+}
+
+footer {
+    margin-top: 20px;
+    color: #4a4a45;
+}
+
+footer p {
+    /*font-size: 13px;*/
+}
+
+a {
+    text-decoration: none;
+    color: #9e2a40;
+}
+
+a:visited {
+    color: #9e2a40;
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        padding-top: 120px;
+    }
+}
