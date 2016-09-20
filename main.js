@@ -37,6 +37,7 @@ document.onkeyup = (e) => {
 
 	for(let i = 0, len = buttons.length; i < len; ++i) {
 		if(buttons[i].textContent === key) {
+			console.log('ressed');
 			buttons[i].click();
 			buttons[i].classList.remove('pressed');
 			break;
@@ -89,6 +90,7 @@ function evalCalc() {
 	if(isNaN(evaled) || evaled === Infinity || evaled === -Infinity) {
 		allClear();
 		cInput.textContent = 'error';
+		resultSet = true;
 		return;
 	}
 
